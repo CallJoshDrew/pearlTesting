@@ -25,7 +25,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed h-14 top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 h-full">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 h-full">
         {" "}
         {/* Added h-full here for alignment */}
         <div className="flex items-center justify-between h-14">
@@ -66,10 +66,10 @@ const Navigation = () => {
               </button>
             </div>
           </div>
-          <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
-            <button onClick={toggleLanguage} className="px-4 py-2">
+          <button onClick={toggleLanguage} className="px-2 py-2 text-xs bg-primary md:bg-transparent md:text-base text-white md:text-black rounded-sm">
               {isEnglish ? "ENG" : "中文"}
             </button>
+          <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
             <ContactDialog trigger={<button className="bg-primary hover:bg-primary/90 text-white px-4 h-8 rounded-sm">{t("nav.enquiry")}</button>} />
           </div>
 
